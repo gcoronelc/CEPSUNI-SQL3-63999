@@ -5,8 +5,8 @@
 ## DATOS DEL CURSO
 
 - Lugar: CEPS-UNI
-- Horario: DOM 14-18 Horas
-- Inicio: 05.FEB.2023
+- Horario: LU-MI-VI 19-22 Horas
+- Inicio: 09-AGO-2023
 - Duración: 24 Horas
 - Dirección: https://goo.gl/maps/PyC3Ek8MXW3bVZoC7
 - Canal Youtube: https://www.youtube.com/channel/UC7c3C0Dtr6HnSpxAAWN643A?sub_confirmation=1
