@@ -17,3 +17,10 @@ SISTEMA DE CALIFICACIÓN
 - 1 Examen Final
 - PP = ( pc1 + pc2 + pc3 + pc4 - MenorPC ) / 3
 - PF = ( PP + EF ) / 2
+
+Correo de trabajos: egcc.uni@gmail.com
+Asunto para los correos: 
+ - SQL3-63999-PRCT01
+ - SQL3-63999-PRCT02
+ - SQL3-63999-PRCT03
+ - SQL3-63999-PRCT04
