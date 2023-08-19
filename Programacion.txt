@@ -1,9 +1,9 @@
 PROGRAMACION DE CLASES
 -------------------------------------------------
 Clase 1: 09.AGO 
-Clase 2: 11.AGO => DOM 14.AGO 12:00
-Clase 3: 
-Clase 4: 
+Clase 2: 11.AGO => PC1 DO 14.AGO 12:00
+Clase 3: 14.AGO
+Clase 4: 16.AGO => PC2 VI 20.AGO 23:59
 Clase 5: 
 Clase 6: 
 Clase 7: 
