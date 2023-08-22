@@ -12,3 +12,34 @@ Ejemplo 2:
 bcp edutec.dbo.Curso out F:\BCP\Curso_B.dat -c -Usa -Psql
 
 
+Ejemplo 3:
+
+bcp edutec.dbo.Curso2 in F:\BCP\Curso_B.dat -T -c
+
+
+Ejemplo 4:
+
+bcp "select NomCurso from EduTec.dbo.Curso" queryout F:\BCP\Curso.NomCurso.dat -T -c
+
+
+Ejemplo 5:
+
+bcp "select * from EduTec.dbo.Profesor where IdProfesor='P002'" queryout F:\BCP\P002.dat -T -c
+
+
+Ejemplo 6:
+
+bcp "select ApeProfesor, NomProfesor from EduTec.dbo.Profesor order by 1, 2" queryout F:\BCP\Profesores.txt -T -c
+
+
+Ejemplo 7:
+
+bcp EduTec.dbo.Curso format nul -T -c -f F:\BCP\Curso.fmt
+
+bcp EduTec.dbo.Curso format nul -T -c -x -f F:\BCP\Curso.xml
+
+bcp EduTec.dbo.Curso3 in F:\BCP\Curso_B.dat -T -f F:\BCP\Curso.xml
+
+bcp "SELECT * FROM dbo.Curso" queryout F:\BCP\Cursos.CSV -t, -c -S . -d EDUTEC -T
+
+
