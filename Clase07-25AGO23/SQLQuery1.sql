@@ -16,7 +16,8 @@ from 'F:\bcp\Curso_A.dat'
 with (formatfile='F:\bcp\Curso.xml');
 go
 
-
+select * from dbo.Curso4; 
+go
 
 
 
