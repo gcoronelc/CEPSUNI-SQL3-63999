@@ -1,0 +1,42 @@
+Alcantara Cerna	Violeta
+Alegre Mendoza	Jose
+Allauca Paucar	Juan Jose
+Bardon Mayta	Julio Cesar
+Becerra Flores	Ursula
+Bustamante Gutierrez	Cesar Augusto
+Carrasco Mu¤oz	Joel
+Chuco Barrera	Raul
+Chuquin Espinoza	Willian
+Condor Ortiz	Saul
+Coronel Castillo	Eric Gustavo
+Cueva Contreras	Martin
+Diaz Vilela	Pedro Pablo
+Fabian Avila	Dionicio
+Flores Manco	Julio Enrrique
+Ganoza Zelada	David
+Guzman Azcurra	Manuel
+Henostroza Macedo	Guino
+Herrera Huanca	Javier
+Lostaunau Navarro	Alberto
+Marcelo Villalobos	Marvin
+Marcelo Villalobos	Ricardo
+Matsukawa Maeda	Sergio
+Narvaez Garcia	Victor
+Oceda Samaniego	Cesar Miguel
+Quintana Saenz	Jorge
+Quiroz Villon	Edgar
+Quispe Tineo	Cesar
+Ramirez Salvador	Julio
+Reynoso Zarate	Jose
+Rodriguez Villacorta	Manuel
+Rosas Ayala	Dario
+Salcedo Martinez	Percy
+Serna Jherry	Jose Luis
+Suarez Valenzuela	Misael
+Valencia Morales	Pedro Hugo
+Vasquez Valenzuela	Javier
+Veliz	Fortumato
+Yupanqui Villegas	Juan
+Yupanqui Villegas	Julio
+Zegarra Zavaleta	Daniel
+Zegarra Zavaleta	Tereza
