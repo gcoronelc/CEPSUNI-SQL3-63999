@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.EDUTEC.sa"
+  DTS:DTSID="{6F785023-EF99-4C8C-AB87-58E45808F3B4}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=EDUTEC;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-SSIS_Proyecto1-{6F785023-EF99-4C8C-AB87-58E45808F3B4}localhost.EDUTEC.sa;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASqRt8wFXHEis66MMTBnJsAAAAAACAAAAAAAQZgAAAAEAACAAAADXfhgDHBpvWhcrZ6i7US8/+f1gy4fjolhDI4U0VPb0aAAAAAAOgAAAAAIAACAAAABc66QwC1FkYpUcQGOtrR+CqC7HrWfMDc40ofXY7kj9VHAAAAAtOpDKnHQ0kScy+oS5s8sHauNJH45PujHJ74zKaJa4TP939bp7Ue+d02tUDXkhP23usjNouAei3xr8eHNsgtZbtf04HKY2eu4nih5OQGpOw0Iug/G9HsqMK70Hnz04redYDPT4cmUykd1VrWPvow2EQAAAAGiurXp68fK9mONYx/voIAQm0vCqA+wXIUTTQn8bh2drVG4wJnNjVQ0DwR3IqWa5P7bwdEfPz816ku1MEB01QLg=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

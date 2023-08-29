@@ -1,0 +1,1074 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/28/2023 7:20:58 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-GC01"
+  DTS:CreatorName="DESKTOP-GC01\Gustavo Coronel"
+  DTS:DTSID="{9987D78C-3279-4E85-9815-ECE15B406604}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5228.0"
+  DTS:LocaleID="10250"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{ADFE1AE9-F9DC-4466-957A-17EF964B706A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CARGAR CURSOS"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C5594CE5-9BB7-4868-9D8D-7B41548F7B3C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CARGAR CURSOS"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="ESCRIBIR TABLA TBL_CURSO"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TBL_CURSO]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Connections[OleDbConnection]"
+                  connectionManagerID="{7F7FEF33-90ED-4D2A-B53D-64C66430983B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.DEMO.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input].Columns[IdCurso]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="IdCurso"
+                      externalMetadataColumnId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input].ExternalColumns[IdCurso]"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].Columns[IdCurso]" />
+                    <inputColumn
+                      refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input].Columns[IdTarifa]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="IdTarifa"
+                      externalMetadataColumnId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input].ExternalColumns[IdTarifa]"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].Columns[IdTarifa]" />
+                    <inputColumn
+                      refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input].Columns[NomCurso]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NomCurso"
+                      externalMetadataColumnId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input].ExternalColumns[NomCurso]"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].Columns[NomCurso]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input].ExternalColumns[IdCurso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="IdCurso" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input].ExternalColumns[IdTarifa]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="IdTarifa" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input].ExternalColumns[NomCurso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NomCurso" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CARGAR CURSOS\LEER TABLA CURSO"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="LEER TABLA CURSO"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Curso]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Connections[OleDbConnection]"
+                  connectionManagerID="{6F785023-EF99-4C8C-AB87-58E45808F3B4}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.EDUTEC.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].Columns[IdCurso]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].ExternalColumns[IdCurso]"
+                      length="4"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].Columns[IdCurso]"
+                      name="IdCurso"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].Columns[IdTarifa]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].ExternalColumns[IdTarifa]"
+                      length="1"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].Columns[IdTarifa]"
+                      name="IdTarifa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].Columns[NomCurso]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].ExternalColumns[NomCurso]"
+                      length="50"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].Columns[NomCurso]"
+                      name="NomCurso"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].ExternalColumns[IdCurso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="IdCurso" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].ExternalColumns[IdTarifa]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="IdTarifa" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output].ExternalColumns[NomCurso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NomCurso" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[IdCurso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[IdCurso]"
+                      name="IdCurso" />
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[IdTarifa]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[IdTarifa]"
+                      name="IdTarifa" />
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[NomCurso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[NomCurso]"
+                      name="NomCurso" />
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CARGAR CURSOS.Paths[OLE DB Source Output]"
+              endId="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\CARGAR CURSOS\LEER TABLA CURSO.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\CARGAR PROFESORES"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9ED05F84-9F1F-45D8-9F93-FF8E3A5F69DA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CARGAR PROFESORES"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="ESCRIBIR PROFESORES"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TBL_PROFESOR]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Connections[OleDbConnection]"
+                  connectionManagerID="{7F7FEF33-90ED-4D2A-B53D-64C66430983B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.DEMO.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].Columns[IdProfesor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="IdProfesor"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[IdProfesor]"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[IdProfesor]" />
+                    <inputColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].Columns[ApeProfesor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ApeProfesor"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[ApeProfesor]"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[ApeProfesor]" />
+                    <inputColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].Columns[NomProfesor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NomProfesor"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[NomProfesor]"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[NomProfesor]" />
+                    <inputColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].Columns[DirProfesor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DirProfesor"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[DirProfesor]"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[DirProfesor]" />
+                    <inputColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].Columns[TelProfesor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TelProfesor"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[TelProfesor]"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[TelProfesor]" />
+                    <inputColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].Columns[EmailProfesor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EmailProfesor"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[EmailProfesor]"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[EmailProfesor]" />
+                    <inputColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].Columns[Clave]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Clave"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[Clave]"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[Clave]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[IdProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IdProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[ApeProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ApeProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[NomProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NomProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[DirProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DirProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[TelProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TelProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[EmailProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EmailProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input].ExternalColumns[Clave]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Clave" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CARGAR PROFESORES\LEER PROFESORES"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="10250"
+              name="LEER PROFESORES"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CARGAR PROFESORES\LEER PROFESORES.Connections[FlatFileConnection]"
+                  connectionManagerID="{0C279C09-B587-48EA-86BB-BF6BC90FA0F3}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Administrador de conexiones de archivos planos]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[IdProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[IdProfesor]"
+                      length="50"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[IdProfesor]"
+                      name="IdProfesor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[ApeProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[ApeProfesor]"
+                      length="50"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[ApeProfesor]"
+                      name="ApeProfesor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[NomProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[NomProfesor]"
+                      length="50"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[NomProfesor]"
+                      name="NomProfesor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[DirProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[DirProfesor]"
+                      length="50"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[DirProfesor]"
+                      name="DirProfesor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[TelProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[TelProfesor]"
+                      length="50"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[TelProfesor]"
+                      name="TelProfesor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[EmailProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[EmailProfesor]"
+                      length="50"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[EmailProfesor]"
+                      name="EmailProfesor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[Clave]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[Clave]"
+                      length="50"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].Columns[Clave]"
+                      name="Clave"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[IdProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IdProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[ApeProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ApeProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[NomProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NomProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[DirProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DirProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[TelProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TelProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[EmailProfesor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EmailProfesor" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output].ExternalColumns[Clave]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Clave" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CARGAR PROFESORES.Paths[Flat File Source Output]"
+              endId="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\CARGAR PROFESORES\LEER PROFESORES.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LIMPIAR TABLAS DESTINO"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{B0B2F53A-B129-4EAE-9E20-3884BE6768A3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LIMPIAR TABLAS DESTINO"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7F7FEF33-90ED-4D2A-B53D-64C66430983B}"
+          SQLTask:SqlStatementSource="DELETE FROM dbo.TBL_CURSO;&#xA;DELETE FROM dbo.TBL_PROFESOR;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{EE1E815E-A929-4C1A-B1BF-896AC1979753}"
+      DTS:From="Package\LIMPIAR TABLAS DESTINO"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\CARGAR CURSOS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{4ABDF2EE-6CAE-402E-9EAC-C8279BFC07B3}"
+      DTS:From="Package\LIMPIAR TABLAS DESTINO"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\CARGAR PROFESORES" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\CARGAR CURSOS"
+          TopLeft="49.1666639803185,281.666664707992" />
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\CARGAR PROFESORES"
+          TopLeft="284.166651140485,281.666664707992" />
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\LIMPIAR TABLAS DESTINO"
+          TopLeft="240.833320174781,41.5999997107188" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="346.833320174781,83.1999997107188">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-212.466656194462,198.466664997273"
+              Start="0,0"
+              End="-212.466656194462,190.966664997273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,95.2333324986366" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,95.2333324986366"
+                    Point2="0,99.2333324986366"
+                    Point3="-4,99.2333324986366" />
+                  <mssgle:LineSegment
+                    End="-208.466656194462,99.2333324986366" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-208.466656194462,99.2333324986366"
+                    Point2="-212.466656194462,99.2333324986366"
+                    Point3="-212.466656194462,103.233332498637" />
+                  <mssgle:LineSegment
+                    End="-212.466656194462,190.966664997273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="381.899985657633,83.1999997107188">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,198.466664997273"
+              Start="0,0"
+              End="0,190.966664997273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,190.966664997273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\CARGAR CURSOS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\CARGAR CURSOS\LEER TABLA CURSO"
+          TopLeft="351.999994754791,58.9999991208315" />
+        <NodeLayout
+          Size="228,41.6"
+          Id="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO"
+          TopLeft="324.999995157122,174.999997392297" />
+        <EdgeLayout
+          Id="Package\CARGAR CURSOS.Paths[OLE DB Source Output]"
+          TopLeft="440.899994955957,100.599999120832">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.3999982714653"
+              Start="0,0"
+              End="0,66.8999982714653">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.8999982714653" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CARGAR CURSOS\ESCRIBIR TABLA TBL_CURSO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\CARGAR CURSOS\LEER TABLA CURSO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\CARGAR PROFESORES">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\CARGAR PROFESORES\LEER PROFESORES"
+          TopLeft="257.499985930821,102.266665955517" />
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES"
+          TopLeft="250.833319628405,300.733331242071" />
+        <EdgeLayout
+          Id="Package\CARGAR PROFESORES.Paths[Flat File Source Output]"
+          TopLeft="349.966652779613,143.866665955517">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,156.866665286554"
+              Start="0,0"
+              End="0,149.366665286554">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,149.366665286554" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CARGAR PROFESORES\ESCRIBIR PROFESORES">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

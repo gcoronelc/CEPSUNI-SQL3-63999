@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.DEMO.sa"
+  DTS:DTSID="{7F7FEF33-90ED-4D2A-B53D-64C66430983B}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=DEMO;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-SSIS_Proyecto1-{7F7FEF33-90ED-4D2A-B53D-64C66430983B}localhost.DEMO.sa;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASqRt8wFXHEis66MMTBnJsAAAAAACAAAAAAAQZgAAAAEAACAAAADb+xlUJnAbKdinK9+1UM1WBvK58d7dZ4prq+H+ctjuPQAAAAAOgAAAAAIAACAAAAAhQYIKPqMZKA59wWfSUvu4ZKLR7PHA7slGXk9S/SIw8nAAAABely12XEbvWxpsTz3ZcqJRfS7rszfO29Dj4EEEEj9ZwMYZOlbh61rBZRbggpWlRPD34TjSS2hzHR9pZDdeGBmY9VcN4cwLJNDEGmj14QXqkN49gn7qP/1iq1qJcKIchYMTW0+b7Yz3tRm4XOgEOHDzQAAAALydetxaWeJCdHI7F3t0i5sFKV2cZ7Nh64FYEe+JP/muur+hpRDYP5qagYL8ovmyFj7Q4KKLz1tdCFIgJQffE68=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
